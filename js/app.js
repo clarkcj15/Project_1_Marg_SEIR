@@ -39,9 +39,7 @@ class Plant {
 
 //Array of pics to choose from
 const plantOptions = [
-    "https://webstockreview.net/images/seedling-clipart-germination-3.jpg",
-    "https://www.clker.com/cliparts/3/0/7/d/1313286119265416372icon-seedling-md.png",
-    "https://banner2.cleanpng.com/20180514/blw/kisspng-seedling-seed-plants-clip-art-5af9573e033f91.8083927215262902380133.jpg",
+    "https://lh3.googleusercontent.com/proxy/Rt5PG9btFerFgr38VMSiWOhhdsuElCPPb3x3fZlRO2Eg1i4bJQA5VzMMjWXa4G1eTneRub6ECPenewfMtxqi1owRJcMmiKmPk91V9wCtV00S6K5WG_SMrSDOfdXtFN3TZfVpP2tjbK-G",
 ]
 
 let slideIndex = 0;
