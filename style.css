@@ -1,0 +1,61 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/79/4b/ac/794bac5c551b094dc32aef6b96bf583d.jpg);
+    background-color: #A7E140;
+    background-size: cover;
+    position: absolute;
+    bottom: 45%;
+
+}
+body > .parnellPlantShop {
+    
+}
+.modal {
+    background-color: #E7F3BE;
+    padding: 30px;
+    width: 50vw;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    position: fixed;
+    top: 45%;
+    transform: translateY(-90%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
+    justify-content: center;
+}
+.modal.open {
+    display: block;
+
+  }
+.carousel {
+    background-color: cornsilk;
+    padding: 30px;
+    width: 450vw;
+    height: 50vh;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    position: fixed;
+    justify-content: center;
+}
+
+
+/* seedling
+https://webstockreview.net/images/seedling-clipart-germination-3.jpg */
+/* baby plant */
+/* 
+https://www.clker.com/cliparts/3/0/7/d/1313286119265416372icon-seedling-md.png
+https://banner2.cleanpng.com/20180514/blw/kisspng-seedling-seed-plants-clip-art-5af9573e033f91.8083927215262902380133.jpg */
+
+/* cool potted plant adult
+
+ */
+
+/* cool potted adult plant Aloe
+https://webstockreview.net/images/plant-clipart-terrestrial-plant.png */
+/* https://thumbnail.imgbin.com/16/14/1/imgbin-cactaceae-plant-cartoon-flowerpot-cartoon-cactus-D4StcMPSRqQ9qp8YSX2uAsYy4_t.jpg
+https://www.pngitem.com/pimgs/m/243-2432635_zombies-cartoon-illustration-piranha-plant-plants-vs-zombies.png
+https://www.3dmodels-textures.com/image/cache/assets/3DModels-Textures/2D%20Cartoon%20Trees703/image/tree%2011-600x450.jpg 
+https://www.pngitem.com/pimgs/m/407-4078486_cartoon-sunflower-plant-transparent-cartoons-plant-with-parts.png */

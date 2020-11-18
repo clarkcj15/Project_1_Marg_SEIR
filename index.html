@@ -3,38 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="js/app.js"></script>
+    <title>Parnell's Plant Shop</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script defer src="js/app.js"></script>
 </head>
 <body>
-    <h1>Parnell's Plant Shop</h1>
-    <section id="Plant-Shop">
-        <button class="start-game">Start Game</button>
+    
+    <section id="parnellPlantShop">
+        <!-- Tamagotchi Div -->
+        <h1>Parnell's Plant Shop</h1>
         <div class="control-panel flex-container">
-            <div class="control">
-                <button class="Sunpower">
-                    Sun power
+            <button class="begin-game">Begin Game</button>
+            <div class="controls">
+                <button class="SunPwr">
+                    Sun Power
                 </button>
-                <button class="h20">
+                <button class="H2O">
                     H2O
                 </button>
                 <button class="love">
                     Love
                 </button>
             </div>
-        </div>
-        <div class="stats">
-            <div class="sun btn">
-                Sun Power: <span>0</span>
-            </div>
-            <div class="water">
-                H2O: <span>0</span>
-            </div>
-            <div class="lve btn">
-                Love: <span>0</span>
+            <div class="plant-stats">
+                <div class="Sun btn">
+                    Sun Power: <span>0</span>
+                </div>
+                <div class="h2o btn">
+                    H2O: <span>0</span>
+                </div>
+                <div class="luv">
+                    Love: <span>0</span>
+                </div>
             </div>
         </div>
     </section>
+    
+    <!-- Carousel -->
+    <!-- Modal -->
+    <div class="modal">
+        <h2>You have been given a seed as a gift. Do you choose to grow this seed?</h2>
+        <!-- <button class="get-started">Let's go!</button> -->
+            <div class="carousel">
+                <h2>Choose Gift</h2>
+                <button class="carousel-select">Accept Gift</button>
+                <img src="" alt="">
+                <button class="carousel-previous">Previous</button>
+                <button class="carousel-next">Next</button>
+            </div>
+   </div>
 </body>
 </html>
