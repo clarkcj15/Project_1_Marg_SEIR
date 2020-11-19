@@ -5,9 +5,9 @@ const carouselNext = document.querySelector(".carousel-next");
 const carouselPrevious = document.querySelector(".carousel-previous");
 const carouselSelect = document.querySelector(".carousel-select");
 const currentStatsContainer = document.querySelector(".plant-stats");
-const sunPwr = document.querySelector(".Sun-Power");
+const sunPwr = document.querySelector(".sunPwr");
 const H2O = document.querySelector(".H2O");
-const love = document.querySelector(".love");
+const Love = document.querySelector(".Love");
 const carousel = document.querySelector(".carousel");
 const parnellPlantShopId = document.querySelector("#parnellPlantShop");
 const carouselImage = document.querySelector(".carousel img");
@@ -163,9 +163,9 @@ const lovePlant = () => plant.Love();
 
 //Event Listeners
 beginButton.addEventListener("click", toggleModal);
-// sunPwr.addEventListener("click", sunPlant);
+sunPwr.addEventListener("click", sunPlant);
 H2O.addEventListener("click", waterPlant);
-love.addEventListener("click",lovePlant);
+Love.addEventListener("click",lovePlant);
 // upgrade
 carouselSelect.addEventListener("click", choosePlant);
 carouselNext.addEventListener("click", changeSlideNext);
