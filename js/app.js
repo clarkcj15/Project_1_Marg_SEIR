@@ -11,6 +11,9 @@ const love = document.querySelector(".love");
 const carousel = document.querySelector(".carousel");
 const parnellPlantShopId = document.querySelector("#parnellPlantShop");
 const carouselImage = document.querySelector(".carousel img");
+const form = document.querySelector("form");
+const ul = document.querySelector("ul");
+const nameBtn = document.querySelector("nameBtn");
 
 
 //Plant Class
@@ -23,7 +26,7 @@ class Plant {
     }
 //Allows player to update the stats of the plant
     updateStats() {
-        currentContainer.innerHTML = `
+        parnellPlantShopId.innerHTML = `
         <div class="sun btn">
                 Sun Power: <span>${this.sunpower}</span>
             </div>
@@ -35,11 +38,27 @@ class Plant {
             </div>    
         `
     }
+
+// Div that stores new plant (Stored in a varable)
+    plantChoiceMade() {
+        const div = document.createElement('div');
+        div.innerHTML = `
+        ${this.name}
+    `
+    parnellPlantShopId.appendChild(div);
+    this.updateStats();
+    }
 }
+//global
+
+const plant = new Plant(`"${this.name}"`, 1, 1, 1);
 
 //Array of pics to choose from
+
 const plantOptions = [
-    "https://lh3.googleusercontent.com/proxy/Rt5PG9btFerFgr38VMSiWOhhdsuElCPPb3x3fZlRO2Eg1i4bJQA5VzMMjWXa4G1eTneRub6ECPenewfMtxqi1owRJcMmiKmPk91V9wCtV00S6K5WG_SMrSDOfdXtFN3TZfVpP2tjbK-G",
+    "https://www.clipartkey.com/mpngs/m/119-1193957_bean-sprouting-into-seedling-seedling-clipart.png",
+    "https://us.123rf.com/450wm/studiobarcelona/studiobarcelona1901/studiobarcelona190100120/119084264-stock-vector-little-germinating-plant-from-seed-seedling-icon-vector-illustration-.jpg?ver=6",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwY0Dw6BdOcFEVBV5aSGwInfAkZslu5rtqJg&usqp=CAU",
 ]
 
 let slideIndex = 0;
@@ -51,14 +70,18 @@ const toggleModal = () => {
 }
 
 //update carousel image
-const updateCarouselImage = () => {
-    carouselImage.setAttribute('src', plantOptions[slideIndex]);
-}
-updateCarouselImage()
+// const updateCarouselImage = () => {
+//     carouselImage.setAttribute('src', plantOptions[slideIndex]);
+// }
+// updateCarouselImage()
 
 //change slide next function -
 //when the user clicks next button
 //update carousel image by 1
+const updateCarouselImage = () => {
+    carouselImage.setAttribute('src', plantOptions[slideIndex]);
+}
+updateCarouselImage()
 
 const changeSlideNext = () => {
     if(slideIndex < plantOptions.length - 1){
@@ -82,12 +105,12 @@ const changeSlidePrevious = () => {
 // make the background of the body element current slide
 // in our carousel
 
-const updateBackground = () => {
+const updateChar = () => {
     const body = document.querySelector("body");
     body.style.plantOptions = `url(${plantOptions[slideIndex]})`;
     carousel.remove();
-    // firstPet.birth();
-    birthPet(); 
+   //Plant Choice Has Been Made
+    choosePlant(); 
 
 }
 
@@ -98,12 +121,38 @@ const openCarousel = () => {
     carousel.classList.add("open");
 }
 
+//Plant functions
+
+const choosePlant = () => plant.plantChoiceMade();
+// const feedPet = () => plant.feed();
+// const playPet = () => plant.play();
+
+
+////Name form button
+// nameBtn.addEventListener("click", (evt) => {
+//     // console.log(evt);
+//     if (input.value !== "") {
+//         // get the value of the input
+//         let userInput = input.value;
+//         // create a li element 
+//         let li = document.createElement("li");
+//         // set the li's content to be the value of the input
+//         li.textContent = userInput;
+//         // append the li to the ul 
+//         ul.appendChild(li);
+//         // clear the input
+//         input.value = "";
+//     }
+// });
+
+
+//Event Listeners
 beginButton.addEventListener("click", toggleModal);
-// getStarted.addEventListener("click", openCarousel);
-// .addEventListener("click", openCarousel);
 // sun
 // h2o
 // love
 // upgrade
-// next
-// back
+carouselSelect.addEventListener("click", choosePlant);
+carouselNext.addEventListener("click", changeSlideNext);
+carouselPrevious.addEventListener("click", changeSlidePrevious);
+carouselSelect.addEventListener("click", updateChar);
