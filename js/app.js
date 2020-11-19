@@ -5,15 +5,15 @@ const carouselNext = document.querySelector(".carousel-next");
 const carouselPrevious = document.querySelector(".carousel-previous");
 const carouselSelect = document.querySelector(".carousel-select");
 const currentStatsContainer = document.querySelector(".plant-stats");
-const SunPwr = document.querySelector(".Sun-Power");
+const sunPwr = document.querySelector(".Sun-Power");
 const H2O = document.querySelector(".H2O");
 const love = document.querySelector(".love");
 const carousel = document.querySelector(".carousel");
 const parnellPlantShopId = document.querySelector("#parnellPlantShop");
 const carouselImage = document.querySelector(".carousel img");
-const form = document.querySelector("form");
-const ul = document.querySelector("ul");
-const nameBtn = document.querySelector("nameBtn");
+// const form = document.querySelector("form");
+// const ul = document.querySelector("ul");
+// const nameBtn = document.querySelector("nameBtn");
 
 
 //Plant Class
@@ -47,6 +47,21 @@ class Plant {
     `
     parnellPlantShopId.appendChild(div);
     this.updateStats();
+    }
+
+    sunPwr() {
+        this.sunpower ++;
+        this.updateStats();
+    }
+
+    H2O() {
+        this.h2o ++;
+        this.updateStats();
+    }
+
+    Love() {
+        this.love ++;
+        this.updateStats();
     }
 }
 //global
@@ -124,9 +139,9 @@ const openCarousel = () => {
 //Plant functions
 
 const choosePlant = () => plant.plantChoiceMade();
-// const feedPet = () => plant.feed();
-// const playPet = () => plant.play();
-
+const sunPlant = () => plant.sunPwr();
+const waterPlant = () => plant.H2O();
+const lovePlant = () => plant.Love();
 
 ////Name form button
 // nameBtn.addEventListener("click", (evt) => {
@@ -148,9 +163,9 @@ const choosePlant = () => plant.plantChoiceMade();
 
 //Event Listeners
 beginButton.addEventListener("click", toggleModal);
-// sun
-// h2o
-// love
+// sunPwr.addEventListener("click", sunPlant);
+H2O.addEventListener("click", waterPlant);
+love.addEventListener("click",lovePlant);
 // upgrade
 carouselSelect.addEventListener("click", choosePlant);
 carouselNext.addEventListener("click", changeSlideNext);
