@@ -30,7 +30,7 @@ body > .parnellPlantShop {
 
   }
 
-.modal.carousel {
+.carousel {
     background-color: cornsilk;
     padding: 30px;
     width: 40vw;
@@ -48,7 +48,7 @@ body > .parnellPlantShop {
     justify-content: center;
 }
 
-.modal.carousel.open {
+.carousel.open {
     display: block;
 }
 

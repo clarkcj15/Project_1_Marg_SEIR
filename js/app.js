@@ -3,6 +3,7 @@ const modal = document.querySelector(".modal");
 const getStarted = document.querySelector(".get-started");
 const carouselNext = document.querySelector(".carousel-next");
 const carouselPrevious = document.querySelector(".carousel-previous");
+const plantChoice = document.querySelector("#parnellPlantShop");
 const carouselSelect = document.querySelector(".carousel-select");
 const currentStatsContainer = document.querySelector(".plant-stats");
 const sunPwr = document.querySelector(".sunPwr");
@@ -85,11 +86,6 @@ const toggleModal = () => {
 }
 
 //update carousel image
-// const updateCarouselImage = () => {
-//     carouselImage.setAttribute('src', plantOptions[slideIndex]);
-// }
-// updateCarouselImage()
-
 //change slide next function -
 //when the user clicks next button
 //update carousel image by 1
@@ -109,7 +105,7 @@ const changeSlideNext = () => {
 
 const changeSlidePrevious = () => {
     if(slideIndex > 0){
-    slideIndex--
+    slideIndex--;
 } else {
     slideIndex = plantOptions.length - 1;
     }
@@ -120,14 +116,22 @@ const changeSlidePrevious = () => {
 // make the background of the body element current slide
 // in our carousel
 
-const updateChar = () => {
-    const body = document.querySelector("body");
-    body.style.plantOptions = `url(${plantOptions[slideIndex]})`;
-    carousel.remove();
-   //Plant Choice Has Been Made
-    choosePlant(); 
 
+const updatePlantChoice = () => {
+    const body = document.querySelector("#parnellPlantShop");
+    body.style.setAttribute = `url(${plantOptions[slideIndex]})`;
+    carousel.remove();
+
+    // updatePlantChoice();
 }
+// const updatePlantChoice = () => {
+//     const section = document.querySelector('.norm');
+//     section.setAttribute('src', plantOptions[slideIndex]);
+//     carousel.remove();
+//    //Plant Choice Has Been Made
+//     updatePlantChoice(); 
+
+// }
 
 const openCarousel = () => {
     //remove the modal
@@ -166,8 +170,8 @@ beginButton.addEventListener("click", toggleModal);
 sunPwr.addEventListener("click", sunPlant);
 H2O.addEventListener("click", waterPlant);
 Love.addEventListener("click",lovePlant);
-// upgrade
+getStarted.addEventListener("click", openCarousel);
 carouselSelect.addEventListener("click", choosePlant);
 carouselNext.addEventListener("click", changeSlideNext);
 carouselPrevious.addEventListener("click", changeSlidePrevious);
-carouselSelect.addEventListener("click", updateChar);
+carouselSelect.addEventListener("click", updatePlantChoice);
