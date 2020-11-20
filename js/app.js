@@ -3,7 +3,7 @@ const modal = document.querySelector(".modal");
 const getStarted = document.querySelector(".get-started");
 const carouselNext = document.querySelector(".carousel-next");
 const carouselPrevious = document.querySelector(".carousel-previous");
-const plantChoice = document.querySelector("#parnellPlantShop");
+const plantChoice = document.querySelector("#actualPlant");
 const carouselSelect = document.querySelector(".carousel-select");
 const currentStatsContainer = document.querySelector(".plant-stats");
 const sunPwr = document.querySelector(".sunPwr");
@@ -12,6 +12,7 @@ const Love = document.querySelector(".Love");
 const carousel = document.querySelector(".carousel");
 const parnellPlantShopId = document.querySelector("#parnellPlantShop");
 const carouselImage = document.querySelector(".carousel img");
+const plantStats = document.querySelector(".plant-stats")
 // const form = document.querySelector("form");
 // const ul = document.querySelector("ul");
 // const nameBtn = document.querySelector("nameBtn");
@@ -27,7 +28,7 @@ class Plant {
     }
 //Allows player to update the stats of the plant
     updateStats() {
-        parnellPlantShopId.innerHTML = `
+        plantStats.innerHTML = `
         <div class="sun btn">
                 Sun Power: <span>${this.sunpower}</span>
             </div>
@@ -117,21 +118,25 @@ const changeSlidePrevious = () => {
 // in our carousel
 
 
-const updatePlantChoice = () => {
-    const body = document.querySelector("#parnellPlantShop");
-    body.style.setAttribute = `url(${plantOptions[slideIndex]})`;
-    carousel.remove();
+// const updatePlantChoice = () => {
+//     const body = document.querySelector("#parnellPlantShop");
+//     body.style.setAttribute = `url(${plantOptions[slideIndex]})`;
+//     carousel.remove();
 
     // updatePlantChoice();
-}
-// const updatePlantChoice = () => {
-//     const section = document.querySelector('.norm');
-//     section.setAttribute('src', plantOptions[slideIndex]);
-//     carousel.remove();
-//    //Plant Choice Has Been Made
-//     updatePlantChoice(); 
-
 // }
+
+
+const updatePlantChoice = () => {
+    const body = document.querySelector('.actualPlant');
+    const img = document.createElement("img")
+    img.setAttribute('src', plantOptions[slideIndex]);
+    body.appendChild(img);
+    carousel.remove();
+//    //Plant Choice Has Been Made
+    // updatePlantChoice(); 
+
+}
 
 const openCarousel = () => {
     //remove the modal

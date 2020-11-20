@@ -7,7 +7,13 @@ body {
 
 }
 body > .parnellPlantShop {
+    display: block;
+    width: 50vw;
+    height: 50vh;
+    align-items: center;
+    align-content: center;
     
+
 }
 .modal {
     background-color: #E7F3BE;
@@ -59,6 +65,9 @@ body > .parnellPlantShop {
 
 }
 
+.actualPlant > img {
+    /* style her */
+}
 
 /* seedling
 /* baby plant */
