@@ -1,20 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+
 body {
     background-image: url(https://i.pinimg.com/originals/79/4b/ac/794bac5c551b094dc32aef6b96bf583d.jpg);
     background-color: #A7E140;
     background-size: cover;
-    position: absolute;
-    bottom: 45%;
-
+    /* position: absolute; */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Xanh Mono', monospace;
+    font-size: xx-large;
+    color: #252b12;
 }
+
 body > .parnellPlantShop {
     display: block;
     width: 50vw;
     height: 50vh;
     align-items: center;
     align-content: center;
-    
-
 }
+
 .modal {
     background-color: #E7F3BE;
     padding: 30px;
@@ -31,21 +36,21 @@ body > .parnellPlantShop {
     display: none;
     justify-content: center;
 }
+
 .modal.open {
     display: block;
-
-  }
+}
 
 .carousel {
     background-color: cornsilk;
     padding: 30px;
     width: 40vw;
-    height: 50vh;
+    height: 70vh;
     max-width: 500px;
     text-align: center;
     border-radius: 10px;
     position: fixed;
-    top: 45%;
+    top: 85%;
     transform: translateY(-90%);
     left: 0;
     right: 0;
@@ -59,14 +64,25 @@ body > .parnellPlantShop {
 }
 
 .carousel > img {
-    width: 50vw;
+    width: 40vw;
     height: 50vh;
     max-width: 500px;
-
 }
 
 .actualPlant > img {
-    /* style her */
+    max-width: 500px;
+    text-align: center;
+    border-radius: 40px;
+    position: fixed;
+    top: 70%;
+    transform: translateY(-90%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    justify-content: center;
+    width: 30vw;
+    height: 50vh;
+
 }
 
 /* seedling
