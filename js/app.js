@@ -85,6 +85,16 @@ class Plant {
         if(this.sunpower >= 15 && this.h2o >= 9 &&this.love >= 8) {
             plantChoice.children[0].setAttribute('src', plantBaby[1]);
         }
+        if(this.sunpower >= 20 && this.h2o >= 15 &&this.love >= 13) {
+            plantChoice.children[0].setAttribute('src', plantBaby[2]);
+        }
+        if(this.sunpower >= 24 && this.h2o >= 18 &&this.love >= 16) {
+            plantChoice.children[0].setAttribute('src', plantBaby[3]);
+        }
+        if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 19) {
+            plantChoice.children[0].setAttribute('src', plantBaby[4]);
+                console.log(win())
+        }
     }
 }
 
@@ -102,7 +112,10 @@ const plantOptions = [
 
 const plantBaby = [
     "https://www.jing.fm/clipimg/detail/217-2176641_treatment-program-second-chances-plant-growing-4-stages.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeitEBC936eJ9a_rwMnlR5v7IsCdAurVVJNg&usqp=CAU",
+    "https://i.dlpng.com/static/png/6774073_preview.png",
+    "https://thumbs.dreamstime.com/b/cartoon-plant-pot-flat-vector-illustration-green-leaves-white-background-decorative-home-plant-81371196.jpg",
+    "https://cdn.shopify.com/s/files/1/2040/0303/products/Cool_Vintage_Video_Game_Green_Venus_Fly_Trap_Plant_Cartoon_657964702_grande.jpg?v=1515690667",
+    "https://cdn.shopify.com/s/files/1/2040/0303/products/Cool_Vintage_Video_Game_Green_Venus_Fly_Trap_Plant_Cartoon_657964702_1024x1024@2x.jpg?v=1515690667",
 ]
 
 let slideIndex = 0;
@@ -113,6 +126,9 @@ const toggleModal = () => {
     modal.classList.toggle('open');
 }
 
+const toggleModal1 = () => {
+    modal1.classList.toggle('open');
+}
 //update carousel image
 //change slide next function -
 //when the user clicks next button
