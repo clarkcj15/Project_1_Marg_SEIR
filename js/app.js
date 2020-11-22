@@ -83,9 +83,9 @@ class Plant {
         if(this.love >= 5 && this.h2o >= 7 && this.sunpower >= 10) {
             carouselImage.setAttribute('src', plantBaby[0]);
             }
-        if(this.love >= 8 && this.h2o >= 10 && this.sunpower >= 14)
-        carouselImage.setAttribute('src', plantTeen[0]);
-        }
+        // if(this.love >= 8 && this.h2o >= 10 && this.sunpower >= 14)
+        // carouselImage.setAttribute('src', plantTeen[0]);
+    }
 }
         
 //global
@@ -106,9 +106,9 @@ const plantBaby = [
     "https://www.clipartkey.com/mpngs/m/18-180420_clip-art-cartoon-plant-png-plant-cartoon-png.png"
 ]
 
-const plantTeen = [
+// const plantTeen = [
 
-]
+// ]
 
 let slideIndex = 0;
 
