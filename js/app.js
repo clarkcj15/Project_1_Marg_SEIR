@@ -79,11 +79,14 @@ class Plant {
         }
     
     checkUpgrade = () => {
-        if(this.love >= 5 && this.h2o >= 7 && this.sunpower >= 10) {
+        if(this.sunpower >= 10 && this.h2o >= 7 &&this.love >= 5) {
             plantChoice.children[0].setAttribute('src', plantBaby[0]);
         }
+        if(this.sunpower >= 15 && this.h2o >= 9 &&this.love >= 8) {
+            plantChoice.children[0].setAttribute('src', plantBaby[1]);
+        }
     }
-}    
+}
 
 //global
 
@@ -99,8 +102,7 @@ const plantOptions = [
 
 const plantBaby = [
     "https://www.jing.fm/clipimg/detail/217-2176641_treatment-program-second-chances-plant-growing-4-stages.png",
-    "https://i.pinimg.com/originals/86/08/89/8608899a7362d4173f2474901d4984b4.jpg",
-    "https://www.clker.com/cliparts/3/0/7/d/1313286119265416372icon-seedling-md.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeitEBC936eJ9a_rwMnlR5v7IsCdAurVVJNg&usqp=CAU",
 ]
 
 let slideIndex = 0;
