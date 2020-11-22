@@ -3,13 +3,13 @@ const modal = document.querySelector(".modal");
 const getStarted = document.querySelector(".get-started");
 const carouselNext = document.querySelector(".carousel-next");
 const carouselPrevious = document.querySelector(".carousel-previous");
-const plantChoice = document.querySelector("#actualPlant");
+const plantChoice = document.querySelector(".actualPlant");
 const carouselSelect = document.querySelector(".carousel-select");
 const currentStatsContainer = document.querySelector(".plant-stats");
 const sunPwr = document.querySelector(".sunPwr");
 const H2O = document.querySelector(".H2O");
 const Love = document.querySelector(".Love");
-const upgrade = document.querySelector(".upgrade")
+// const upgrade = document.querySelector(".upgrade")
 const carousel = document.querySelector(".carousel");
 const parnellPlantShopId = document.querySelector("#parnellPlantShop");
 const carouselImage = document.querySelector(".carousel img");
@@ -77,24 +77,19 @@ class Plant {
             this.updateStats();
             // }, interval);
         }
-        
-        
+    
     checkUpgrade = () => {
         if(this.love >= 5 && this.h2o >= 7 && this.sunpower >= 10) {
-            carouselImage.setAttribute('src', plantBaby[0]);
-            }
-        // if(this.love >= 8 && this.h2o >= 10 && this.sunpower >= 14)
-        // carouselImage.setAttribute('src', plantTeen[0]);
+            plantChoice.children[0].setAttribute('src', plantBaby[0]);
+        }
     }
-}
-        
+}    
+
 //global
 
 const plant = new Plant("Gladys", 1, 1, 1);
 
 //Array of pics to choose from
-// const nameList = ["Gladys", "Gertrude", "Harrison", "Enola", "Lionel"]
-
 
 const plantOptions = [
     "https://www.clipartkey.com/mpngs/m/119-1193957_bean-sprouting-into-seedling-seedling-clipart.png",
@@ -103,12 +98,10 @@ const plantOptions = [
 ]
 
 const plantBaby = [
-    "https://www.clipartkey.com/mpngs/m/18-180420_clip-art-cartoon-plant-png-plant-cartoon-png.png"
+    "https://www.jing.fm/clipimg/detail/217-2176641_treatment-program-second-chances-plant-growing-4-stages.png",
+    "https://i.pinimg.com/originals/86/08/89/8608899a7362d4173f2474901d4984b4.jpg",
+    "https://www.clker.com/cliparts/3/0/7/d/1313286119265416372icon-seedling-md.png",
 ]
-
-// const plantTeen = [
-
-// ]
 
 let slideIndex = 0;
 
