@@ -88,21 +88,22 @@ class Plant {
         if(this.sunpower >= 20 && this.h2o >= 15 &&this.love >= 13) {
             plantChoice.children[0].setAttribute('src', plantBaby[2]);
         }
-        if(this.sunpower >= 24 && this.h2o >= 18 &&this.love >= 16) {
+        // if(this.sunpower >= 24 && this.h2o >= 18 &&this.love >= 16) {
+        //     plantChoice.children[0].setAttribute('src', plantBaby[3]);
+        // }
+        if(this.sunpower >= 24 && this.h2o >= 22 &&this.love >= 20) {
             plantChoice.children[0].setAttribute('src', plantBaby[3]);
-        }
-        if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 20) {
-            plantChoice.children[0].setAttribute('src', plantBaby[4]);
-        }
-    }
-    checkWin = () => {
-        if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 20) {
             console.log("Congratulations! You have helped grow your little seedling grow to a big plant!")
-            // toggleModal.innerHTML = `
-            //     <h1>Congratulations! You have helped grow your little seedling grow to a big plant!</h1>
-            //     `
-            }
+        }
     }
+    // checkWin = () => {
+    //     if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 20) {
+    //         console.log("Congratulations! You have helped grow your little seedling grow to a big plant!")
+    //         // toggleModal.innerHTML = `
+    //         //     <h1>Congratulations! You have helped grow your little seedling grow to a big plant!</h1>
+    //         //     `
+    //         }
+    // }
 } 
 
 //global
@@ -121,7 +122,6 @@ const plantBaby = [
     "https://www.jing.fm/clipimg/detail/217-2176641_treatment-program-second-chances-plant-growing-4-stages.png",
     "https://i.dlpng.com/static/png/6774073_preview.png",
     "https://thumbs.dreamstime.com/b/cartoon-plant-pot-flat-vector-illustration-green-leaves-white-background-decorative-home-plant-81371196.jpg",
-    "https://cdn.shopify.com/s/files/1/2040/0303/products/Cool_Vintage_Video_Game_Green_Venus_Fly_Trap_Plant_Cartoon_657964702_grande.jpg?v=1515690667",
     "https://cdn.shopify.com/s/files/1/2040/0303/products/Cool_Vintage_Video_Game_Green_Venus_Fly_Trap_Plant_Cartoon_657964702_1024x1024@2x.jpg?v=1515690667",
 ]
 
