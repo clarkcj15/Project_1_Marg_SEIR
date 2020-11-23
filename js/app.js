@@ -97,9 +97,10 @@ class Plant {
     }
     checkWin = () => {
         if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 20) {
-            toggleModal.innerHTML = `
-                <h1>Congratulations! You have helped grow your little seedling grow to a big plant!</h1>
-                `
+            console.log("Congratulations! You have helped grow your little seedling grow to a big plant!")
+            // toggleModal.innerHTML = `
+            //     <h1>Congratulations! You have helped grow your little seedling grow to a big plant!</h1>
+            //     `
             }
     }
 } 
