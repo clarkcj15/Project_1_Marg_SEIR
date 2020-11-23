@@ -91,12 +91,18 @@ class Plant {
         if(this.sunpower >= 24 && this.h2o >= 18 &&this.love >= 16) {
             plantChoice.children[0].setAttribute('src', plantBaby[3]);
         }
-        if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 19) {
+        if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 20) {
             plantChoice.children[0].setAttribute('src', plantBaby[4]);
-                console.log(win())
         }
     }
-}
+    checkWin = () => {
+        if(this.sunpower >= 27 && this.h2o >= 22 &&this.love >= 20) {
+            toggleModal.innerHTML = `
+                <h1>Congratulations! You have helped grow your little seedling grow to a big plant!</h1>
+                `
+            }
+    }
+} 
 
 //global
 
@@ -126,9 +132,6 @@ const toggleModal = () => {
     modal.classList.toggle('open');
 }
 
-const toggleModal1 = () => {
-    modal1.classList.toggle('open');
-}
 //update carousel image
 //change slide next function -
 //when the user clicks next button
