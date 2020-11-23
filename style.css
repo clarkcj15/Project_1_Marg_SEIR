@@ -4,21 +4,17 @@ body {
     background-image: url(https://i.pinimg.com/originals/79/4b/ac/794bac5c551b094dc32aef6b96bf583d.jpg);
     background-color: #A7E140;
     background-size: cover;
-    /* position: absolute; */
     height: 100vh;
     margin: 20;
     font-family: 'Xanh Mono', monospace;
     color: #2F4902;
-    font: larger;
+    font: xx-large;
 
-}
-/* body > h1 {
-    font: larger;
 }
 
 body > h2 {
     font: medium;
-} */
+}
 
 body > .parnellPlantShop {
     display: block;
@@ -43,10 +39,6 @@ body > .parnellPlantShop {
     margin: 0 auto;
     display: none;
     justify-content: center;
-}
-
-.modal1.open {
-    display: block;
 }
 
 .modal.open {
@@ -92,11 +84,10 @@ body > .parnellPlantShop {
     right: 0;
     margin: 0 auto;
     justify-content: center;
-    width: 30vw;
+    width: 40vw;
     height: 50vh;
-
+    
 }
-
 /* seedling
 /* baby plant */
 /* 
@@ -105,7 +96,7 @@ https://banner2.cleanpng.com/20180514/blw/kisspng-seedling-seed-plants-clip-art-
 
 /* cool potted plant adult
 
- */
+*/
 
 /* cool potted adult plant Aloe
 https://webstockreview.net/images/plant-clipart-terrestrial-plant.png */
